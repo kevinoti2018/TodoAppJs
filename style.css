@@ -23,7 +23,7 @@ body{
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-   margin-top: 10rem;
+   margin-top: 3rem;
    /* height: 30rem; */
    border-radius: .4rem;
 }
@@ -68,7 +68,7 @@ body{
 }
 .container .todos .todo p{
     /* color:black; */
-    font-size: 1.9rem;
+    font-size: 1.4rem;
     width: 16rem;
     color: black;
 }
