@@ -1,0 +1,96 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-image: linear-gradient(to right , #051937, #004d7a, #008793, #00bf72);
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    /* justify-content:center; */
+    /* align-content:center; */
+    
+}
+.container{
+    width: 40rem;
+    background:white;
+    padding: .9rem;
+    opacity: .9;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+   margin-top: 10rem;
+   /* height: 30rem; */
+   border-radius: .4rem;
+}
+.container h1{
+    padding:1rem;
+    color: #051937;
+    text-transform:uppercase;
+    text-align: center;
+}
+.container .inputs #input{
+    outline: none;
+    border:none;
+    width: 30rem;
+    margin-top: 2rem;
+    height: 3rem;
+    border-radius: .4rem;
+    font-size: 1.2rem;
+    padding: .5rem;
+    background-color: lightgrey;
+}
+.container .inputs #add{
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    color: white;
+    padding:.9rem;
+    width:6rem;
+    border-radius: 1rem;
+    cursor:pointer;
+    background:#A8EB12;
+}
+
+.container .todos .todo{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    margin-top: 1.9rem;
+    /* background: red; */
+    width: 32rem;
+    padding:.5rem;
+    color: white;
+}
+.container .todos .todo p{
+    /* color:black; */
+    font-size: 1.9rem;
+    width: 16rem;
+    color: black;
+}
+
+.container .todos .todo .icons{
+    display:flex;
+    /* background:red; */
+    width: 7rem;
+    padding: .6rem;
+    justify-content: space-between;
+}
+.container .todos .todo .icons ion-icon{
+    font-size: 1.8rem;
+    /* color: red; */
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.container .todos .todo .icons .trash{
+    color: red;
+}
+.container .todos .todo .icons  .check{
+    color:green;
+}
+

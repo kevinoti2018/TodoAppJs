@@ -1,0 +1,28 @@
+// const createTodo = (todo) => {
+//     //creating a div
+//     const todo_container = document.createElement("div");
+//     //adding a class to the new dic
+//     todo_container.classList.add("todo");
+
+//     const todo_span = document.createElement("span");
+//     todo_span.innerText = todo.title;
+
+//     const check_complete = document.createElement("input");
+//     //setting attributes
+//     check_complete.setAttribute("type", "checkbox");
+
+//     const delete_btn = document.createElement("button");
+//     delete_btn.id = todo.id;
+//     delete_btn.innerHTML = '<i class="fas fa-trash-alt"></i>'
+//     //appending all elements to a todo container
+//     todo_container.append(todo_span, check_complete, delete_btn)
+
+//     return todo_container
+// }
+
+// // function to append all todos
+// const appendTodos = (todos) => {
+//     todos.map((todo) => {
+//           todos_container.appendChild(createTodo(todo))
+//     })
+// }
