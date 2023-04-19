@@ -23,7 +23,7 @@ body{
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-   margin-top: 3rem;
+   margin-top: 1rem;
    /* height: 30rem; */
    border-radius: .4rem;
 }
@@ -72,6 +72,10 @@ body{
     width: 16rem;
     color: black;
 }
+.container .todos .todo  .strike{
+
+    text-decoration: line-through;
+}
 
 .container .todos .todo .icons{
     display:flex;
@@ -80,17 +84,19 @@ body{
     padding: .6rem;
     justify-content: space-between;
 }
-.container .todos .todo .icons ion-icon{
+.container .todos .todo .icons {
     font-size: 1.8rem;
     /* color: red; */
     outline: none;
     border: none;
     cursor: pointer;
+     color:grey
 }
 .container .todos .todo .icons .trash{
     color: red;
 }
 .container .todos .todo .icons  .check{
     color:green;
+   
 }
 

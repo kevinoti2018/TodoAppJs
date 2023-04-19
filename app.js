@@ -8,12 +8,25 @@ const tasksContainer = document.querySelector('.todos')
 const createTask = (task)=>{
     const taskContainer = document.createElement('div');
     taskContainer.classList.add('todo')
-    const titleElement = document.createElement('p')
+    let titleElement = document.createElement('p')
     titleElement.innerText = task.name
     const iconContainer = document.createElement('div')
     iconContainer.classList.add('icons')
     const checkButton = document.createElement('span')
-    checkButton.classList.add('check')
+    const completedTask = (e)=>{
+        e.stopPropagation()
+        for(let tsk in tasks){
+            if(tasks[tsk].id==task.id){
+                checkButton.classList.toggle('check')
+                titleElement.classList.toggle('strike')
+                // titleElement.style.textDecoration='underline'
+            }
+            // console.log(task[tsk].id)
+        }
+    }
+    checkButton.addEventListener('click',completedTask)
+   
+    
     checkButton.innerHTML = `<ion-icon name="checkbox"></ion-icon>`
     const deleteButton = document.createElement('span')
     deleteButton.id = task.id
@@ -22,11 +35,14 @@ const createTask = (task)=>{
     const deleteItem = (e)=>{
         e.stopPropagation()
         for(let tsk in tasks){
-            console.log(tsk)
-            if(tasks[tsk].id == task.id){
+           
+            if(tasks[tsk].id==task.id){
                 tasks.splice(tsk, 1)
                 appendTasks(tasks)
             }
+            // if(tasks[tsk].id == task.id){
+                
+            // }
             
         }
     }
@@ -43,6 +59,7 @@ const createTask = (task)=>{
 
 
 const appendTasks= (tasks)=>{
+    tasksContainer.innerHTML = ''
     const singleTask = tasks.map(task=>{
         tasksContainer.appendChild(createTask(task))
     })
